@@ -21,7 +21,7 @@ history = pickle.load(file)
 file.close()
 
 
-def plot_train_val(history):
+def plot_history(history):
     fig, (ax1, ax2) = plt.subplots(1, 2)
 
     # Accuracy
@@ -44,4 +44,4 @@ def plot_train_val(history):
     plt.show()
 
 
-plot_train_val(history)
+plot_history(history)

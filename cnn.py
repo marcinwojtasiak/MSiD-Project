@@ -1,6 +1,5 @@
 import mnist_reader
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
 from keras.models import Sequential
@@ -89,6 +88,7 @@ model.compile(optimizer=Adam(lr=0.001), loss='categorical_crossentropy', metrics
 # train and save model
 history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=80, batch_size=256)
 model.save('trained_model/cnn')
+# save history
 from pickle import dump
 file = open('trained_model/history', 'wb')
 dump(history.history, file)
@@ -97,29 +97,3 @@ file.close()
 # evaluate model
 score = model.evaluate(X_test, y_test, batch_size=256)
 print(score)
-
-
-def plot_train_val(history):
-    fig, (ax1, ax2) = plt.subplots(1, 2)
-
-    # Accuracy
-    ax1.set_title('Model accuracy')
-    ax1.plot(history['accuracy'])
-    ax1.plot(history['val_accuracy'])
-    ax1.set_xlabel('epoch')
-    ax1.set_ylabel('accuracy')
-    ax1.legend(['train', 'validation'], loc='upper left')
-
-    # Loss
-    ax2.set_title('Model loss')
-    ax2.plot(history['loss'])
-    ax2.plot(history['val_loss'])
-    ax2.set_xlabel('epoch')
-    ax2.set_ylabel('loss')
-    ax2.legend(['train', 'validation'], loc='upper left')
-
-    fig.set_size_inches(20, 5)
-    plt.show()
-
-
-plot_train_val(history.history)
