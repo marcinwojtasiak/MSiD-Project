@@ -11,7 +11,7 @@ I found k=7 to give the best results, by comparing few diffrent values end evalu
 I got a classification error of 0.1483, which means an accuracy of 0.8517.  
 It's a result comparable to those on zalando research benchmark which have an average accuracy of 0.8543.
 ### Usage
-To use the algorithm you will need these files: data, knn.py, fashion_knn.py and mnist_reader.py. Then just run the fashion_knn.py script.
+To use the algorithm you will need these files: [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/knn.py), [fashion_knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/fashion_knn.py) and [mnist_reader.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py). Then just run the fashion_knn.py script.
 ## Convolutional neural network
 ### Methods
 I used a CNN of following architecture:
@@ -68,6 +68,6 @@ Hyperparameters aren't fine-tuned. Results could be slightly better after fine-t
 I achieved a loss of 0.2578 and an accuracy of 94.31%  
 <img src="./images/plots.png">
 ### Usage
-To create and train the CNN, you need [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion) and [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) files. cnn.py will train the model and save it in folder trained_model as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.  
-There is my trained CNN in folder trained_model which can be loaded using keras.model.load_model as well as it's training history.  
+To create and train the CNN, you need [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [mnist_reader](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py) and [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) files. The cnn.py script will train the model and save it in folder trained_model as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.  
+There is my trained CNN in folder [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model) which can be loaded using keras.model.load_model as well as it's training history.  
 test_model.py will load those and print model summary, evaluate the model and plot the history.
