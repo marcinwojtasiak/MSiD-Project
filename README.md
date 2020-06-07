@@ -4,13 +4,14 @@ Classification algorithm for images from Fashion-MNIST dataset.
 Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10 categories. It contains 60,000 training examples and 10,000 test examples.I am sharing my result on this data set using a KNN algorithm as well as a CNN.
 ## KNN
 ### Methods
-I calculated the distance between examlpes as euclidean distance. https://en.wikipedia.org/wiki/Euclidean_distance
+I calculated the distance between examples as euclidean distance.
+I also normalized the data by dividing the value for each pixel by 255.  
 ### Results
 I found k=7 to give the best results, by comparing few diffrent values end evaluating the results on a validation set created from 20% of test examples.  
-I also normalized the data by dividing the value for each pixel by 255.  
 I got a classification error of 0.1483, which means an accuracy of 0.8517.  
+It's a result comparable to those on zalando research benchmark which have an average accuracy of 0.8543.
 ### Usage
-To use the algorithm
+To use the algorithm you will need these files: data, knn.py, fashion_knn.py and mnist_reader.py. Then just run the fashion_knn.py script.
 ## Convolutional neural network
 ### Methods
 I used a CNN of following architecture:
@@ -52,11 +53,11 @@ Trainable params: 1,048,652
 Non-trainable params: 514
 _________________________________________________________________
 ```
-It has two pairs of convolutional layers, each followed by a max pooling layer and two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
+It has two pairs of convolutional layers, each followed by a max pooling layer and then two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
 
 Preprocessing:  
 Data normalization - divided value for each pixel by 255.  
-Data augmentation - rotation and horizontal flips  
+Data augmentation - rotation and horizontal flips.  
 
 Training set - validation set: 80% - 20%
 
@@ -64,5 +65,9 @@ I used dropout to prevent overfitting and batch normalization to improve speed a
 
 Hyperparameters aren't fine-tuned. Results could be slightly better after fine-tuning.
 ### Results
-I achieved a loss of 0.2622 and an accuracy of 94.59%
+I achieved a loss of 0.2578 and an accuracy of 94.31%  
+<img src="./images/plots.png">
 ### Usage
+To create and train the CNN, you need data and cnn.py files. cnn.py will train the model and save it in folder trained_model as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.  
+There is my trained CNN in folder trained_model which can be loaded using keras.model.load_model as well as it's training history.  
+test_model.py will load those and print model summary, evaluate the model and plot the history.
