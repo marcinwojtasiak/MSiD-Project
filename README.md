@@ -12,7 +12,8 @@ I found k=7 to give the best results, by comparing few diffrent values end evalu
 I got a classification error of 0.1483, which means an accuracy of 0.8517.  
 It's a result comparable to those on zalando research benchmark which have an average accuracy of 0.8543.
 ### Usage
-To use the algorithm you will need these files: [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/knn.py), [fashion_knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/fashion_knn.py) and [mnist_reader.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py). Then just run the fashion_knn.py script.
+To use the algorithm you will need these files: [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/knn.py), [fashion_knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/fashion_knn.py) and [mnist_reader.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py). Then run the fashion_knn.py script.
+
 ## Convolutional neural network
 ### Methods
 I used a CNN of following architecture:
@@ -54,7 +55,7 @@ Trainable params: 1,048,652
 Non-trainable params: 514
 _________________________________________________________________
 ```
-It has two pairs of convolutional layers, each followed by a max pooling layer and then two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
+It has two pairs of convolutional layers, each followed by a max pooling layer and then two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.  
 I have set the filter size of the first two conv layers to be smaller in order to pick up more detiled features and then a bit bigger filter to detect bigger features.
 
 Preprocessing:  
@@ -67,12 +68,13 @@ I used dropout to prevent overfitting and batch normalization to improve speed a
 
 Hyperparameters aren't fine-tuned. Results could be slightly better after fine-tuning.
 ### Results
-I achieved a loss of 0.2586 and an accuracy of 94.23%  
+I achieved a loss of 0.2586 and an accuracy of 94.23% on the test set.  
 | Fashion-MNIST<br>test accuracy | Fashion-MNIST<br>train accuracy | Fashion-MNIST<br>validation accuracy |
 | :---: | :---: | :---: |
 | 94.23% | 98.40% | 96.94%
 <img src="./images/plots.png">
 
+Model gives quite good results in comparison to similar models on zalando research benchmark.
 ### Usage
 To create and train the CNN, you need [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [mnist_reader](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py) and [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) files. The cnn.py script will train the model and save it in [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model) as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.
 The scrpit uses numpy, sklearn, matplotlib and tensorflow.  
