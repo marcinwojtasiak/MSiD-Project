@@ -5,6 +5,7 @@ Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10
 Here is an example of the data:  
   
 <img src="./images/data_examples.png">  
+
  I am sharing my result achieved using a KNN algorithm as well as a CNN.  
 ## KNN
 ### Methods
