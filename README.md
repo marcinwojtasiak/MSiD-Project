@@ -68,6 +68,6 @@ Hyperparameters aren't fine-tuned. Results could be slightly better after fine-t
 I achieved a loss of 0.2578 and an accuracy of 94.31%  
 <img src="./images/plots.png">
 ### Usage
-To create and train the CNN, you need data and cnn.py files. cnn.py will train the model and save it in folder trained_model as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.  
+To create and train the CNN, you need [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion) and [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) files. cnn.py will train the model and save it in folder trained_model as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.  
 There is my trained CNN in folder trained_model which can be loaded using keras.model.load_model as well as it's training history.  
 test_model.py will load those and print model summary, evaluate the model and plot the history.
