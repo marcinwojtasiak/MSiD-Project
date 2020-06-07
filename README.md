@@ -5,7 +5,7 @@ Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10
 
 ## KNN
 ### Methods
-I calculated the distance between examples as euclidean distance.
+I calculated the distance between examples using euclidean distance.
 I also normalized the data by dividing the value for each pixel by 255.  
 ### Results
 I found k=7 to give the best results, by comparing few diffrent values end evaluating the results on a validation set created from 20% of test examples.  
@@ -57,6 +57,7 @@ _________________________________________________________________
 ```
 It has two pairs of convolutional layers, each followed by a max pooling layer and then two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.  
 I have set the filter size of the first two conv layers to be smaller in order to pick up more detiled features and then a bit bigger filter to detect bigger features.
+Flatten layer changes the dimensions so that they fit the output.
 
 Preprocessing:  
 Data normalization - divided value for each pixel by 255.  
