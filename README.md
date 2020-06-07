@@ -1,7 +1,8 @@
 # MSiD-Project
 Classification algorithm for images from Fashion-MNIST dataset.
 ### Introduction
-Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10 categories. It contains 60,000 training examples and 10,000 test examples.I am sharing my result on this data set using a KNN algorithm as well as a CNN.
+Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10 categories. It contains 60,000 training examples and 10,000 test examples. I am sharing my result achieved using a KNN algorithm as well as a CNN.
+
 ## KNN
 ### Methods
 I calculated the distance between examples as euclidean distance.
@@ -54,6 +55,7 @@ Non-trainable params: 514
 _________________________________________________________________
 ```
 It has two pairs of convolutional layers, each followed by a max pooling layer and then two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
+I have set the filter size of the first two conv layers to be smaller in order to pick up more detiled features and then a bit bigger filter to detect bigger features.
 
 Preprocessing:  
 Data normalization - divided value for each pixel by 255.  
@@ -65,7 +67,10 @@ I used dropout to prevent overfitting and batch normalization to improve speed a
 
 Hyperparameters aren't fine-tuned. Results could be slightly better after fine-tuning.
 ### Results
-I achieved a loss of 0.2578 and an accuracy of 94.31%  
+I achieved a loss of 0.2586 and an accuracy of 94.23%  
+| Fashion-MNIST<br>test accuracy | Fashion-MNIST<br>train accuracy | Fashion-MNIST<br>validation accuracy |
+| :---: | :---: | :---: |
+| 94.23% | 98.40% | 96.94% |
 <img src="./images/plots.png">
 ### Usage
 To create and train the CNN, you need [data/fashion](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/data/fashion), [mnist_reader](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/mnist_reader.py) and [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) files. The cnn.py script will train the model and save it in [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model) as "cnn" using kers.model.save_model, together with history dictionary from history object as "history" using pickle.
