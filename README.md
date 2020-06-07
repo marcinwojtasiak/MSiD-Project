@@ -6,9 +6,9 @@ Fashion-MNIST is a data set of 28x28 greyscale images of clothing pieces from 10
 ### Methods
 I calculated the distance between examlpes as euclidean distance. https://en.wikipedia.org/wiki/Euclidean_distance
 ### Results
-I found k=7 to give the best results, by comparing few diffrent values end evaluating the results on a validation set created from 20% of test examples.
-I also normalized the data by dividing the value for each pixel by 255.
-I got a classification error of 0.1483, which means an accuracy of 0.8517.
+I found k=7 to give the best results, by comparing few diffrent values end evaluating the results on a validation set created from 20% of test examples.  
+I also normalized the data by dividing the value for each pixel by 255.  
+I got a classification error of 0.1483, which means an accuracy of 0.8517.  
 ### Usage
 To use the algorithm
 ## Convolutional neural network
@@ -54,9 +54,9 @@ _________________________________________________________________
 ```
 It has two pairs of convolutional layers, each followed by a max pooling layer and two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
 
-Preprocessing:
-Data normalization - divided value for each pixel by 255.
-Data augmentation - rotation and horizontal flips
+Preprocessing:  
+Data normalization - divided value for each pixel by 255.  
+Data augmentation - rotation and horizontal flips  
 
 Training set - validation set: 80% - 20%
 
