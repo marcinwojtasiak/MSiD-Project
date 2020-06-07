@@ -14,7 +14,7 @@ To use the algorithm
 ## Convolutional neural network
 ### Methods
 I used a CNN of following architecture:
-
+```
 Model: "sequential_1"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
@@ -51,7 +51,7 @@ Total params: 1,049,166
 Trainable params: 1,048,652
 Non-trainable params: 514
 _________________________________________________________________
-
+```
 It has two pairs of convolutional layers, each followed by a max pooling layer and two fully connected layers. I tested few diffrent architectures and this one proved to give the best results.
 
 Preprocessing:
