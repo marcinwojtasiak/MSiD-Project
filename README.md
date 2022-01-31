@@ -70,6 +70,8 @@ Training set - validation set: 80% - 20%
 I used dropout to prevent overfitting and batch normalization to improve speed and stability of the network.
 
 Hyperparameters aren't fine-tuned. Results could be slightly better after fine-tuning.
+
+The model was trained for 50 epochs.
 ### Results
 I achieved a loss of 0.2606 and an accuracy of 93.52% on the test set.  
 | Fashion-MNIST<br>test accuracy | Fashion-MNIST<br>train accuracy | Fashion-MNIST<br>validation accuracy |
