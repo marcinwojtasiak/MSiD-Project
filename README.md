@@ -5,8 +5,9 @@ Here is an example of the data:
   
 <img src="./images/data_examples.png">  
 
- I am sharing my result achieved using a KNN algorithm and a CNN.  
+I am sharing my result, achieved using a KNN algorithm and a CNN.  
 ## KNN
+I used my own implementation of a KNN algorithm.
 ### Methods
 I calculated the distance between examples using euclidean distance.
 I also normalized the data by dividing the value for each pixel by 255.  
@@ -18,8 +19,9 @@ It's a result comparable to those on zalando research benchmark which have an av
 Run the [fashion_knn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/fashion_knn.py) script.
 
 ## Convolutional neural network
+I made the CNN using Keras library.
 ### Methods
-I used a CNN of following architecture:
+I used a CNN of a following architecture:
 ```
 Model: "sequential_1"
 _________________________________________________________________
