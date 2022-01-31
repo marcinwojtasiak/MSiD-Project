@@ -79,7 +79,6 @@ I achieved a loss of 0.2606 and an accuracy of 93.52% on the test set.
 | 93.52% | 98.15% | 94.25%
 <img src="./images/plots.png">
 
-Model gives quite good results in comparison to similar models on zalando research benchmark.
 ### Usage
 Run the [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) script. The model will be saved to [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model).
 There is my trained CNN in [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model), which can be loaded using keras.model.load_model.
