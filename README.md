@@ -79,7 +79,7 @@ I achieved a loss of 0.2606 and an accuracy of 93.52% on the test set.
 | Fashion-MNIST<br>test accuracy | Fashion-MNIST<br>train accuracy | Fashion-MNIST<br>validation accuracy |
 | :---: | :---: | :---: |
 | 93.52% | 98.15% | 94.25%
-<img src="./images/plots.png">
+<img src="./images/plot.png">
 
 ### Usage
 Run the [cnn.py](https://github.com/marcinwojtasiak/MSiD-Project/blob/master/cnn.py) script. The model will be saved to [trained_model](https://github.com/marcinwojtasiak/MSiD-Project/tree/master/trained_model).
